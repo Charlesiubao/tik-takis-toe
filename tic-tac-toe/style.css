@@ -1,0 +1,172 @@
+:root {
+    --cell-size: 100px;
+}
+
+body {
+    background-color:#281949;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgba(233, 211, 17, 0.986);
+    font-family: 'tekton-pro', sans-serif;
+    font-weight: 1000;
+    font-style: italic;
+    font-size: 100px;
+}
+
+h3 {
+    color: rgb(93, 197, 45);
+    font-family: 'Black And White Picture', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.GameTitle {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position:inherit
+}
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+}
+
+.grid div {
+    border: solid hotpink 1px;
+    width: 33%;
+    height: 33%;
+    position: relative;
+    background-color: #7649fe;
+}
+
+/* .grid div:first-child,
+.grid div:nth-child(2),
+.grid div:nth-child(3) {
+    border-top: none;
+}
+
+.grid div:nth-child(3n+1) {
+    border-left: none;
+}
+
+.grid div:nth-child(3n+3) {
+    border-right: none;
+}
+
+
+.grid div:last-child,
+.grid div:nth-child(7),
+.grid div:nth-child(8) {
+    border-bottom: none;
+} */
+
+.playerX {
+    background-image: url(./assets/TakisX.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+}
+
+.playerO {
+    background-image: url(./assets/takisO.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cell.playerX {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cell.playerO {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.winning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+}
+
+/* .winning-message.restartButton {
+    box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Black And White Picture', sans-serif;
+	font-size: 20px;
+	padding:8px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+} */
+
+/* .winning-message.restartButton:hover {
+    background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+
+.winning-message.restartButton:active {
+    position:relative;
+	top:1px;
+} */
+
+.winning-message.show {
+    display: flex;
+}
+
+
+.restartButton {
+    box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Black And White Picture', sans-serif;
+	font-size: 20px;
+	padding:8px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+
+.restartButton:hover {
+    background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+
+.restartButton:active {
+    position:relative;
+	top:1px;
+}
